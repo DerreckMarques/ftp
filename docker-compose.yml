@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+
+   vsftpd:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "21:21"
+    volumes:
+      - ./data/:/home/teste/ftp_directory/
