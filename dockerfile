@@ -14,7 +14,6 @@ RUN apt-get update \
     && chmod -R 777 ftp_data \
     && mv /vsftpd.conf /etc/vsftpd.conf \
     && chown root:root /etc/vsftpd.conf \
-    && setenforce 0
     && /etc/init.d/vsftpd restart 
 
 ENTRYPOINT ["tail", "-f", "/dev/null"]
